@@ -1,0 +1,11 @@
+{
+  "task_kind": "new-document",
+  "output": "pdf",
+  "signals": ["premium-operations-manual", "emerald-glass-cover"],
+  "hard_constraints": ["Português do Brasil", "imagem de capa esmeralda cristalina", "manual operacional completo", "PDF"],
+  "content_features": {
+    "code_blocks": 0,
+    "defined_terms": 14,
+    "portrait_images": 1
+  }
+}

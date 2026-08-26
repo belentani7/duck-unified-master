@@ -1,0 +1,94 @@
+version: '3.8'
+
+services:
+  # MySQL Database
+  mysql:
+    image: mysql:8.0-alpine
+    container_name: duck-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass123
+      MYSQL_DATABASE: duck_studio
+      MYSQL_USER: duck_user
+      MYSQL_PASSWORD: duckpass123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - duck-network
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: duck-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - duck-network
+
+  # Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: duck-app
+    environment:
+      NODE_ENV: production
+      DATABASE_URL: mysql://duck_user:duckpass123@mysql:3306/duck_studio
+      REDIS_URL: redis://redis:6379
+      JWT_SECRET: your_very_secret_jwt_key_min_32_chars_long
+      API_URL: http://localhost:3000
+      CLIENT_URL: http://localhost:3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    volumes:
+      - ./dist:/app/dist
+      - ./public:/app/public
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/api/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    networks:
+      - duck-network
+    restart: unless-stopped
+
+  # Optional: Adminer (Database UI)
+  adminer:
+    image: adminer
+    container_name: duck-adminer
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    networks:
+      - duck-network
+
+volumes:
+  mysql_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  duck-network:
+    driver: bridge

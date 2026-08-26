@@ -1,0 +1,188 @@
+¿Cómo liberar espacio en unidad C: con 0 GB libres? - Manus
+Instagram(8_26_20264：59：12AM).html
+Código · 7.06 MB
+Início-Duck(8_26_20264：59：35AM).html
+Código · 4.86 MB
+Skip to content
+
+belentani7
+
+fashion-stylist-ai
+
+Repository navigation
+
+Code
+
+Issues
+
+Pull requests
+
+Agents
+
+Actions
+
+Projects
+
+Wiki
+
+Security and quality
+
+Insights
+
+Settings
+
+Owner avatar
+
+fashion-stylist-ai
+
+Public
+
+Start coding with Codespaces
+
+Add a README file and start coding in a secure, configurable, and dedicated development environment.
+
+ 
+
+Add collaborators to this repository
+
+Search for people using their GitHub username or email address.
+
+ 
+
+Quick setup — if you’ve done this kind of thing before
+
+or	
+
+https://github.com/belentani7/fashion-stylist-ai.git
+
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+
+ 
+
+…or create a new repository on the command line
+
+echo "# fashion-stylist-ai" >> README.md
+
+git init
+
+git add README.md
+
+git commit -m "first commit"
+
+git branch -M duck
+
+git remote add origin https://github.com/belentani7/fashion-stylist-ai.git
+
+git push -u origin duck
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/belentani7/fashion-stylist-ai.git
+
+git branch -M duck
+
+git push -u origin duck
+
+ ProTip! Use the URL for this page when adding GitHub as a remote.
+
+Footer
+
+© 2026 GitHub, Inc.
+
+Footer navigation
+
+Terms
+
+Privacy
+
+Security
+
+Status
+
+Community
+
+Docs
+
+Contact
+
+Manage cookies
+
+Do not share my personal information https://duck.46graus.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&utm_id=97760_v0_s00_e0_tv3 
+
+1
+
+Foto del perfil de belentani_
+
+duck4s
+
+Duck
+
+48 publicaciones
+
+1435 seguidores
+
+1601 seguidos
+
+Músico/grupo de música
+
+Produtor
+
+Beatmaker
+
+Mix/Master engineer
+
+"Duck que beat é esse?"
+
+@check_match
+
+Le sigue marcusfam
+
+Meta
+
+Información
+
+Blog
+
+Empleo
+
+Ayuda
+
+API
+
+Privacidad
+
+Condiciones
+
+Ubicaciones
+
+Popular
+
+Instagram Lite
+
+Meta AI
+
+Threads
+
+Subir contactos y personas no usuarias
+
+Meta Verified
+
+Español (España)
+
+ 
+
+Español (España)
+
+© 2026 Instagram from Meta crie tuido o site profisionl porfafolio o site artistico o site de vendas e a maquina automatizada geradora de beats profisionais qualidade maxima, a gestao de emails ate o fechamento de vendas onde lucas pode decidir controlsr ou nao. crie a maquina, o protocolo totalmente automatizado. crie automatizacao adaptada ao entorno as leis locais totalmente independente da musica mas que gere retorno. gere as ferramentas de produccao musical totais para windows, gere portal de clientes gere asistente ia compactados especialmente pro seu nicho, crie o seu estilo . vidro gordo redondo glassomorfismo. verde esmeralda. toda decisao passam por 3 nodos diferentes auditoris absoluts praticamente autoindependentre,amplie o projeto com prompt maestro resolvendo a estructura. deixe tudo feito pronro pra funcionar use o melhor design do mundo. crie a maquina mais robusta.
+
+5:05
+Lite
+Esta va por cuenta de Manus, sin cargo de créditos
+Entendi: você quer transformar o projeto fashion-stylist-ai em uma plataforma profissional para o artista Duck, com portfólio, vendas, geração de beats, gestão de clientes e automações comerciais auditáveis. Antes de começar, preciso confirmar três pontos: 1) deseja um site web público com painel administrativo e portal privado de clientes, ou também um aplicativo Windows instalável? 2) para a geração de beats, você já possui um motor/API/licença específica ou devo criar inicialmente uma versão funcional baseada em presets, MIDI e processamento local? 3) devo trabalhar sobre o repositório GitHub indicado e publicar uma primeira versão utilizável, usando como identidade visual o glassmorfismo verde-esmeralda e formas arredondadas? Se preferir, posso seguir com esse entendimento padrão: site web + painel + portal de clientes, geração musical local inicialmente e arquitetura preparada para integrações futuras.
+
+
+
+Documents
+
+Manus is an AI Agent and can make mistakes. Please double-check before use.
+

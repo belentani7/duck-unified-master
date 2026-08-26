@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1786750484418,
+      "tag": "0000_handy_thunderbird",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1786750639861,
+      "tag": "0001_clumsy_satana",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1786751625915,
+      "tag": "0002_dry_molecule_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1786752128791,
+      "tag": "0003_ambiguous_violations",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1786752262532,
+      "tag": "0004_vengeful_firestar",
+      "breakpoints": true
+    }
+  ]
+}

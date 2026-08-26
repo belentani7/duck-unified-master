@@ -1,0 +1,17 @@
+/* DUCK — Base Styles */
+/* Reset & Variables */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+:root{--bg:#080e08;--g:#39582f;--gd:#15210f;--a:#9acb6b;--c:#efe7d0;--ms:#1e3018;--f:'Space Grotesk',sans-serif;--fb:'Inter',sans-serif;}
+html{background:var(--bg);scroll-behavior:smooth;}
+body{font-family:var(--fb);background:var(--bg);color:var(--c);overflow-x:hidden;line-height:1.6;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+:focus-visible{outline:2px solid var(--a);outline-offset:3px;}
+
+/* Cursor */
+.cur{width:16px;height:16px;border:1.5px solid var(--a);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;mix-blend-mode:difference;transition:width .2s,height .2s,border-color .2s;}
+.cur.on{width:50px;height:50px;border-color:var(--c);margin-top:-17px;margin-left:-17px;}
+@media(max-width:768px){.cur{display:none;}}
+
+/* Scroll Progress */
+.scroll-progress{position:fixed;top:0;left:0;width:0;height:3px;background:var(--a);z-index:1000;transition:width .1s linear;}

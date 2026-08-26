@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /scripts/
+Disallow: /docs/
+Disallow: /.github/
+
+Sitemap: https://duckmusic.com.br/sitemap.xml
+
+# DUCK PROD - Musical Producer Portfolio
+# https://duckmusic.com.br

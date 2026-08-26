@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1787713570184,
+      "tag": "0000_serious_chamber",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1787713884405,
+      "tag": "0001_yummy_boomerang",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1787715531015,
+      "tag": "0002_serious_slayback",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1787716148718,
+      "tag": "0003_robust_silk_fever",
+      "breakpoints": true
+    }
+  ]
+}

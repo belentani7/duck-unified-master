@@ -1,0 +1,76 @@
+# PROMPT DE AUDITORIA — SISTEMA INTEGRADO (VERSÃO FINAL DE PRODUÇÃO)
+
+Abaixo segue o pacote completo solicitado: o **prompt-mestre de auditoria** pronto para uso, o **checklist técnico por domínio** (referenciado em normas e frameworks reconhecidos), e a **especificação do front-end glassomórfico** ilustrada no painel gerado acima (cristal espesso, cintilante, leve e persistente).
+
+---
+
+## 1. PROMPT-MESTRE DE AUDITORIA (copiar e executar)
+
+> "Atue como auditor sênior de sistemas e segurança ofensiva/defensiva. Avalie o ambiente descrito contra **ISO/IEC 27001:2022**, **NIST CSF 2.0**, **CIS Controls v8**, **OWASP ASVS 4.0 / WSTG 4.3**, **OWASP Top 10 2021**, e, para dados pessoais, **LGPD (Lei 13.709/2018)/GDPR**. Para cada domínio — (1) ampliação/escalabilidade, (2) automação, (3) protocolos de segurança, (4) estabilidade de sistemas operativos, (5) testes de cibersegurança, (6) máquina real funcional, (7) assistente IA compacto e autônomo, (8) portal de clientes, (9) prontidão de produção, (10) processos alternos em segundo plano, (11) front-end glassomórfico — produza: evidência exigida, conformidade (C/NC/Parcial), achados com severidade **CVSS v4**, plano de remediação com prazo, e métrica de verificação. Encerre com parecer de go/no-go para produção e matriz de riscos residual."
+
+---
+
+## 2. CHECKLIST TÉCNICO POR DOMÍNIO
+
+### 2.1 Ampliação (escalabilidade)
+- Escala horizontal com balanceador de carga e health-checks; headroom de capacidade ≥ 30–40% em pico.
+- Testes de carga/stress com **k6** ou **Locust** documentados (p95 < 300 ms sob carga nominal).
+- Stateless na camada de aplicação; estado externalizado (DB/Redis) para permitir réplicas.
+
+### 2.2 Automação
+- CI/CD com pipelines assinados e deploys imutáveis (GitHub Actions/GitLab CI); IaC com **Terraform/Ansible** versionada.
+- Patch management automatizado com janela de manutenção e rollback automático em falha de health-check.
+- Self-healing: reinício por watchdog, recriação de contêineres/serviços degradados.
+
+### 2.3 Protocolos de segurança (implementação)
+- **TLS 1.3** apenas, HSTS preload, cifras AEAD (AES-256-GCM / ChaCha20-Poly1305); **mTLS** entre serviços.
+- Repouso: AES-256-GCM com rotação de chaves (KMS); senhas com **Argon2id**.
+- Autenticação: OAuth 2.1/OIDC + MFA com **FIDO2/WebAuthn**; zero trust com verificação contínua.
+- WAF + rate limiting + proteção anti-bot no perímetro do portal.
+
+### 2.4 Estabilidade de sistemas operativos
+- Kernel LTS com hardening (sysctl: ASLR, SYN cookies, rp_filter), Secure Boot + TPM 2.0.
+- Watchdogs (systemd `WatchdogSec`), kdump configurado, integridade de arquivos com **AIDE/Tripwire**.
+- Observabilidade: Prometheus + Grafana com SLOs (disponibilidade ≥ 99,9%), alertas acionáveis, MTTR < 15 min.
+
+### 2.5 Passe de testes de cibersegurança
+- **SAST** (Semgrep/CodeQL), **DAST** (OWASP ZAP), **SCA** de dependências, fuzzing de entradas críticas.
+- Pentest externo anual + interno trimestral seguindo **PTES/WSTG**; scan de vulnerabilidades (OpenVAS/Nessus) contínuo.
+- SLA de correção: crítico ≤ 72 h, alto ≤ 7 dias; simulação de phishing com treinamento.
+
+### 2.6 Máquina real funcional
+- Burn-in de 48–72 h (stress-ng, memtest86+), telemetria térmica e SMART de discos validados.
+- ECC RAM onde aplicável; UPS testada; TPM 2.0 ativo para attestation e armazenamento de chaves.
+
+### 2.7 Assistente IA compactado, adaptado, super independente
+- Modelo local quantizado (GGUF Q4_K–Q8) via **llama.cpp/Ollama**: operação 100% offline, 4–8 GB RAM.
+- Memória persistente local (sqlite-vec/Chroma) + sandbox de execução; **zero telemetria externa**.
+- Fallback determinístico para ações críticas (confirmação humana) e logs de auditoria das ações do agente.
+
+### 2.8 Portal de clientes
+- RBAC granular, logs de auditoria imutáveis, sessões com rotação e revogação.
+- Conformidade LGPD/GDPR: consentimento registrado, exportação e eliminação de dados (direito do titular), DPO/encarregado designado.
+- Acessibilidade **WCAG 2.2 AA** e suporte multilíngue.
+
+### 2.9 Produção finalizada (go-live)
+- Backups **3-2-1** com restauração testada; DR com RPO ≤ 15 min / RTO ≤ 1 h documentados.
+- Runbooks, plano de rollback, documentação operacional e termo de aceite assinado.
+- Monitoramento, alertas e on-call ativos **antes** do corte de tráfego.
+
+### 2.10 Máxima aplicação de processos alternos em segundo plano
+- Filas assíncronas (Redis/RabbitMQ) com workers idempotentes, retries exponenciais e dead-letter queue.
+- Agendamentos com trava (`flock`) anti-duplicidade; limites via cgroups/nice para não competir com o foreground.
+- Tarefas pesadas (relatórios, indexação, sincronização) sempre fora do caminho crítico da UI.
+
+### 2.11 Front-end — glassomorfismo real (cristal gordo, cintilante, leve, persistente)
+- `backdrop-filter: blur(18–24px) saturate(160–180%)` sobre camadas translúcidas (α ≈ 0,55–0,7).
+- Borda de 1–2 px com gradiente especular, sombra interna + highlight superior para espessura de "cristal gordo"; dispersão iridescente sutil nos cantos.
+- Performance: composição em GPU (`transform: translateZ(0)`, `will-change` pontual), evitar overdraw de múltiplos blurs empilhados; fallback com `@media (prefers-reduced-transparency)`.
+- Leveza: assets comprimidos (AVIF/WebP), code-splitting, LCP < 2,5 s.
+- Persistência: estado de sessão e preferências em `localStorage/IndexedDB` com criptografia client-side quando sensível.
+
+---
+
+## 3. PARECER OPERACIONAL
+
+Com os itens 2.1–2.11 evidenciados (artefatos de teste, logs, configs e relatórios anexados ao prompt-mestre), o ambiente atende aos critérios de **produção finalizada**: seguro por padrão, estável, automatizado, com IA autônoma offline e portal glassomórfico de alto desempenho. O painel visualizado consolida exatamente esses indicadores — status de segurança, gauges de estabilidade do SO, resultados de testes de cibersegurança, monitor de processos em segundo plano e o assistente ao vivo — materializando o front-end de cristal espesso e cintilante especificado.

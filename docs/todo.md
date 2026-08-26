@@ -1,0 +1,42 @@
+# Project TODO
+
+- [x] Estabelecer o sistema visual responsivo em verde-esmeralda, glassmorfismo espesso, contraste acessível e redução de movimento.
+- [ ] Publicar trabalhos destacados reais quando Duck fornecer autorizações, créditos e ativos de cada projeto.
+- [ ] Conectar prévias de áudio autorizadas e comparador de licenças real ao catálogo de beats.
+- [ ] Conectar Shopify para catálogo, carrinho e checkout seguro de produtos digitais quando a integração ficar disponível.
+- [x] Completar a gestão de entregáveis, feedback e aprovações de etapas com dados reais por projeto.
+- [x] Conectar o Beat Lab ao salvamento de propostas nos briefs do cliente.
+- [ ] Publicar recursos Windows reais e atribuí-los com segurança a cada cliente.
+- [x] Criar gestor administrativo para envio e inventário de ativos reais em armazenamento privado.
+- [x] Criar gestão administrativa de modelos de licença e produtos em rascunho, sem termos ou preços inventados.
+- [x] Implementar o centro de controle do proprietário para leads, projetos, automações, pausa global e aprovação manual.
+- [x] Modelar a governança de três nós para validar regras, avaliar riscos e exigir aprovação configurável antes de ações externas.
+- [x] Adicionar consentimento, preferências comerciais, privacidade adaptável por jurisdição e rastreabilidade de comunicações, sem substituir aconselhamento jurídico local.
+- [x] Adicionar testes automatizados, validação visual, documentação de ativação e controles de estados vazios.
+- [ ] Resolver o bloqueio de permissões de Shopify detectado durante a ativação do storefront.
+- [x] Verificar passivamente no Gmail do proprietário se há mensagens ou convites Shopify associados ao e-mail do Duck.
+- [x] Pesquisar passivamente por Shopify e ducks.beata no Gmail do proprietário, sem enviar ou alterar mensagens.
+- [x] Pesquisar passivamente por DUCKBEATS7@gmail.com e Shopify no Gmail do proprietário, sem enviar ou alterar mensagens.
+- [x] Criar e entregar manual premium em PDF com identidade esmeralda cristalina e instruções completas do Duck Studio.
+- [ ] Enviar o manual premium em PDF para duckbeats7@gmail.com após confirmação explícita do proprietário.
+- [x] Inserir atribuição técnica discreta de Belentani como cedente da infraestrutura e Duck como operador artístico da plataforma.
+- [x] Criar e entregar ZIP exclusivo do Duck com código, controles e documentação administrativa, sem segredos ou dependências instaladas.
+- [x] Criar e entregar ZIP de cliente contendo somente manual e materiais explicitamente destinados ao cliente.
+- [x] Incluir mapa de acesso que diferencie controles do Duck, área do cliente e conteúdo ainda não liberado.
+- [x] Aplicar cabeçalhos de segurança e proteção de privacidade compatíveis com a hospedagem gerenciada.
+- [x] Implementar fluxo real de consulta, retirada de consentimento e exclusão de leads após verificação de identidade.
+- [ ] Repetir validação manual de navegação por teclado e leitor de tela no ambiente publicado.
+- [ ] Executar a bateria final completa de testes somente após o proprietário fornecer ativos, termos e decisão de integração comercial.
+- [x] Pesquisar e classificar recursos públicos de GitHub, Hugging Face e fontes financeiras abertas por licença, risco e benefício para Duck Studio.
+- [x] Preparar adaptadores, flags e documentação de ativação para recursos externos aprovados, sem expor credenciais, dados bancários ou conteúdo licenciado de terceiros.
+- [ ] Validar adaptadores externos na bateria final de build, tipagem e testes quando o proprietário autorizar.
+- [x] Confirmar o prompt mestre de auditoria adaptado ao Duck Studio antes de encerrar a auditoria.
+- [x] Traduzir integralmente o site e o portal para português do Brasil.
+- [x] Adicionar seleção e versões públicas opcionais em espanhol e inglês.
+- [x] Documentar o plano de evolução para máquina física, legado operacional e sustentabilidade financeira sem alegar recursos não implantados.
+- [x] Definir e documentar premissas, faixas e limites para cenários probabilísticos de receita e ativos digitais.
+- [x] Criar um painel de cenários controláveis pelo proprietário, sem previsão garantida, transação automática ou promessa de retorno financeiro.
+- [x] Produzir matriz de auditoria com evidências, lacunas, dependências externas e prioridades de correção.
+- [x] Modelar catálogo comercial de produtos, licenças versionadas, ativos digitais e eventos de funil sem simular checkout ou pagamento.
+- [x] Implementar um CRM leve e o núcleo operacional de automações com controles de três nós, pausa e trilha de auditoria.
+- [x] Preparar entrega segura de ativos e histórico de licença para ativação após integrações de pagamento e armazenamento autorizadas.

@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0.0",
+  "ecosystem": "duck",
+  "principle": "reference-not-replace",
+  "systems": [
+    {"id":"duck-studio-pro","name":"DUCK Full Studio Pro","repository":"belentani7/duck-full-studio-pro","domain":"studio","mode":"simulated","preserveOriginal":true,"capabilities":["projects","stems","comments","audit","versions"]},
+    {"id":"duck-zion-premium","name":"DUCK / BELENTANI Canal ZION Premium","repository":"belentani7/DUCK-ZION-PREMIUM","domain":"zion","mode":"simulated","preserveOriginal":true,"capabilities":["experience","toolkit","gema","portal","automation"]},
+    {"id":"duck-studio-os","name":"Duck Studio OS","repository":"belentani7/duck-studio-os-protected","domain":"studio","mode":"planned","preserveOriginal":true,"capabilities":["api","plugins","daw-bridge","analytics"]},
+    {"id":"duck-zion-studio","name":"Duck Zion Studio","repository":"belentani7/duck-zion-studio","domain":"zion","mode":"planned","preserveOriginal":true,"capabilities":["studio","experience"]},
+    {"id":"gema-1-lab","name":"Gema Nº 01 Lab","repository":"belentani7/DUCK-A-GEMA-1-LAB","domain":"gema","mode":"simulated","preserveOriginal":true,"capabilities":["toolkit","creative-instruments","visual-identity"]},
+    {"id":"duck-local-win11","name":"Duck Studio Local Win11","repository":"belentani7/DUCK-STUDIO-LOCAL-WIN11","domain":"local","mode":"simulated","preserveOriginal":true,"capabilities":["local-knowledge","plugins","producer-workstation"]},
+    {"id":"duck-omega","name":"Duck Omega","repository":"belentani7/duck-omega","domain":"ai","mode":"planned","preserveOriginal":true,"capabilities":["reasoning","automation"]},
+    {"id":"aion-workforce","name":"AION Workforce","repository":"belentani7/08-AION-WORKFORCE","domain":"workforce","mode":"planned","preserveOriginal":true,"capabilities":["agents","orchestration","actions"]},
+    {"id":"nexus-aion","name":"Nexus AION Enterprise","repository":"belentani7/nexus-aion-enterprise","domain":"workforce","mode":"planned","preserveOriginal":true,"capabilities":["orchestration","enterprise"]},
+    {"id":"nexus-workforce","name":"Nexus Workforce Enterprise","repository":"belentani7/nexus-workforce-enterprise","domain":"workforce","mode":"planned","preserveOriginal":true,"capabilities":["agents","workflows"]},
+    {"id":"noiacore","name":"NOIACORE","repository":"belentani7/NOIACORE","domain":"ai","mode":"planned","preserveOriginal":true,"capabilities":["lab","ai","experimentation"]}
+  ]
+}

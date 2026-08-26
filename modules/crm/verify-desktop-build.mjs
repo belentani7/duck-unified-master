@@ -1,0 +1,10 @@
+import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const required = ["desktop/main.cjs", "desktop/preload.cjs", "desktop/package.json", "dist/public/index.html", "backend/dist/duckos-core"];
+const missing = required.filter((file) => !fs.existsSync(path.join(root, file)));
+const config = JSON.parse(fs.readFileSync(path.join(root, "desktop/package.json"), "utf8"));
+if (!config.build?.win?.target?.some((target) => target.target === "portable") || !config.build?.win?.target?.some((target) => target.target === "nsis")) throw new Error("Windows portable/NSIS targets are missing");
+if (missing.length) throw new Error(`Missing desktop inputs: ${missing.join(", ")}`);
+console.log(JSON.stringify({ ok: true, verified: required, windowsTargets: ["portable", "nsis"], backend: "frozen-executable-present", execution: "smoke-ready" }, null, 2));

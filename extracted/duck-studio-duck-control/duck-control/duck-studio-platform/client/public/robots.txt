@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /portal
+Disallow: /control
+Disallow: /growth
+Disallow: /beat-lab
+Disallow: /resources

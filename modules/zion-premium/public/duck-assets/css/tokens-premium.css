@@ -1,0 +1,55 @@
+:root {
+  /* Color Tokens */
+  --duck-background: #080e08;
+  --duck-surface: #0f1a0f;
+  --duck-accent: #9acb6b;
+  --duck-accent-glow: #7cb342;
+  --duck-text-primary: #f0f6fc;
+  --duck-text-secondary: #8b949e;
+  --duck-border: rgba(154,203,107,0.1);
+
+  /* Typography Scale (1.25 modular) */
+  --duck-font-size-xs: 12px;
+  --duck-font-size-sm: 15px;
+  --duck-font-size-md: 18.75px;
+  --duck-font-size-lg: 23.4375px;
+  --duck-font-size-xlg: 29.296875px;
+  --duck-font-size-xxlg: 36.62109375px;
+
+  /* Spacing Scale (8px base) */
+  --duck-spacing-xs: 8px;
+  --duck-spacing-sm: 16px;
+  --duck-spacing-md: 24px;
+  --duck-spacing-lg: 32px;
+  --duck-spacing-xlg: 40px;
+  --duck-spacing-xxlg: 48px;
+
+  /* Border Radius Tokens */
+  --duck-border-radius-xs: 2px;
+  --duck-border-radius-sm: 4px;
+  --duck-border-radius-md: 6px;
+  --duck-border-radius-lg: 8px;
+
+  /* Shadow Tokens (Elevation System) */
+  --duck-shadow-low: 0 1px 2px rgba(0,0,0,0.1);
+  --duck-shadow-medium: 0 2px 4px rgba(0,0,0,0.2);
+  --duck-shadow-high: 0 4px 8px rgba(0,0,0,0.3);
+
+  /* Transition Tokens (Cubic-Bezier Curves) */
+  --duck-transition-fast: cubic-bezier(0.4,0,0.2,1) 150ms;
+  --duck-transition-medium: cubic-bezier(0.4,0,0.2,1) 300ms;
+  --duck-transition-slow: cubic-bezier(0.4,0,0.2,1) 500ms;
+
+  /* Z-Index Scale */
+  --duck-z-index-base: 0;
+  --duck-z-index-overlay: 10;
+  --duck-z-index-modal: 20;
+  --duck-z-index-toast: 30;
+
+  /* Breakpoint Tokens */
+  --duck-breakpoint-xs: 320px;
+  --duck-breakpoint-sm: 480px;
+  --duck-breakpoint-md: 768px;
+  --duck-breakpoint-lg: 1024px;
+  --duck-breakpoint-xlg: 1280px;
+}

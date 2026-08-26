@@ -1,0 +1,30 @@
+{
+  "name": "duck-prod",
+  "version": "2.0.0",
+  "description": "DUCK PROD - Portfolio Musical Interactivo",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx live-server --port=3000",
+    "build": "node scripts/build.js",
+    "optimize": "node scripts/optimize-images.js",
+    "sitemap": "node scripts/generate-sitemap.js",
+    "audit": "npx lighthouse https://duckmusic.com.br --output=html --output-path=./docs/lighthouse-report.html",
+    "lint:css": "npx stylelint 'css/**/*.css'",
+    "lint:js": "npx eslint 'js/**/*.js'"
+  },
+  "keywords": [
+    "portfolio",
+    "music",
+    "producer",
+    "beatmaker",
+    "duck",
+    "aracaju",
+    "brazil"
+  ],
+  "author": "Duck Prod",
+  "license": "MIT",
+  "devDependencies": {
+    "lighthouse": "^12.0.0",
+    "live-server": "^1.2.2"
+  }
+}

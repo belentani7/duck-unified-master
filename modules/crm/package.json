@@ -1,0 +1,25 @@
+{
+  "name": "duck-os-desktop",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^36.3.1",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.duck.rnf",
+    "productName": "DuckOS RnF",
+    "asar": true,
+    "compression": "maximum",
+    "directories": { "output": "release" },
+    "files": ["main.cjs", "preload.cjs", "../dist/**/*", "../backend/dist/**/*"],
+    "win": { "target": [{ "target": "nsis", "arch": ["x64"] }, { "target": "portable", "arch": ["x64"] }], "artifactName": "DuckOS-RnF-${version}-${arch}.${ext}" },
+    "nsis": { "oneClick": false, "perMachine": false, "allowToChangeInstallationDirectory": true, "createDesktopShortcut": true, "createStartMenuShortcut": true }
+  }
+}

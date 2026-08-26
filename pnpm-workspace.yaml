@@ -1,0 +1,66 @@
+packages:
+  # Modules (main apps)
+  - 'modules/*'
+
+  # Monorepo packages (shared libs)
+  - 'monorepo/packages/*'
+
+  # Integrations
+  - 'integrations/*'
+
+  # Tools
+  - 'tools/*'
+
+  # Root workspace
+  - '.'
+
+catalog:
+  # Core
+  react: 19.2.1
+  'react-dom': 19.2.1
+  typescript: 5.9.3
+
+  # Audio
+  'tone.js': 14.8.49
+  'web-audio-api': '*'
+
+  # UI
+  '@radix-ui/react-dialog': 1.1.15
+  'tailwindcss': 4.1.14
+
+  # Backend
+  express: 4.21.2
+  '@trpc/server': 11.6.0
+  '@trpc/client': 11.6.0
+
+  # Database
+  'drizzle-orm': 0.44.5
+  'mysql2': 3.15.0
+
+  # Forms
+  'react-hook-form': 7.64.0
+  zod: 4.1.12
+
+  # Build
+  vite: 7.1.7
+  esbuild: 0.25.0
+
+  # Testing
+  vitest: 2.1.4
+  '@testing-library/react': 14.1.2
+
+  # Payments
+  'stripe': 14.0.0
+  '@stripe/stripe-js': 17.0.0
+
+  # AWS
+  '@aws-sdk/client-s3': 3.693.0
+
+  # Utils
+  'date-fns': 4.1.0
+  'nanoid': 5.1.5
+
+  # Dev
+  prettier: 3.6.2
+  eslint: 8.56.0
+  '@types/node': 24.7.0

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DUCK — Produção Musical | Studio Interactivo</title>
+  <meta name="description" content="Duck, produtor musical de Aracaju. Beatmaker, mixagem e masterização. 36M+ streams, 40+ lançamentos.">
+  <meta name="theme-color" content="#080e08">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://duckmusic.com.br/">
+  <meta property="og:title" content="DUCK — Produção Musical | Aracaju, Brasil">
+  <meta property="og:description" content="Beatmaker, mixagem e masterização. 36M+ streams, 40+ lançamentos. Transformo a intenção do artista em arquitetura sonora de elite.">
+  <meta property="og:image" content="images/capa-1920x1080.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DUCK — Produção Musical">
+  <meta name="twitter:description" content="36M+ streams. Beatmaker, mixagem e masterização.">
+  <meta name="twitter:image" content="images/capa-1920x1080.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo-123.png">
+  <link rel="apple-touch-icon" href="images/logo-123.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Lenis CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.25/dist/lenis.css">
+
+  <!-- Modular CSS (dependency order) -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/tokens-premium.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/accessibility.css">
+  <link rel="stylesheet" href="css/navigation.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/instruments.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/buttons-premium.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/cards-premium.css">
+  <link rel="stylesheet" href="css/forms.css">
+  <link rel="stylesheet" href="css/modals.css">
+  <link rel="stylesheet" href="css/animations-premium.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js" defer></script>
+
+  <!-- Lenis JS -->
+  <script src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js" defer></script>
+
+  <!-- Data -->
+  <script src="data.js" defer></script>
+
+  <!-- Modular JS (dependency order) -->
+  <script src="js/animations.js" defer></script>
+  <script src="js/hover-effects.js" defer></script>
+  <script src="js/micro-interactions.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+
+<!-- Skip Navigation -->
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- Custom Cursor -->
+<div class="cur" id="cursor"></div>
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<!-- Ink Splash Intro -->
+<div class="slime-intro" id="slime-intro">
+  <svg class="slime-svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo"/>
+        <feBlend in="SourceGraphic" in2="goo"/>
+      </filter>
+    </defs>
+    <circle class="slime-drop" cx="10" r="3" style="--dur:1.6s;--del:0.1s"/>
+    <circle class="slime-drop" cx="25" r="4" style="--dur:1.8s;--del:0.2s"/>
+    <circle class="slime-drop" cx="40" r="2.5" style="--dur:1.5s;--del:0.05s"/>
+    <circle class="slime-drop" cx="55" r="3.5" style="--dur:1.7s;--del:0.15s"/>
+    <circle class="slime-drop" cx="70" r="2" style="--dur:1.4s;--del:0.25s"/>
+    <circle class="slime-drop" cx="85" r="4.5" style="--dur:1.9s;--del:0.1s"/>
+    <circle class="slime-drop" cx="95" r="3" style="--dur:1.6s;--del:0.3s"/>
+    <circle class="slime-ink" cx="20" cy="30" r="5" style="--idel:0.8s"/>
+    <circle class="slime-ink" cx="50" cy="50" r="8" style="--idel:1.2s"/>
+    <circle class="slime-ink" cx="80" cy="40" r="6" style="--idel:1s"/>
+    <ellipse class="slime-pool" cx="50" cy="95" rx="60" ry="10" style="--pdel:1.8s"/>
+  </svg>
+  <div class="slime-text">DUCK</div>
+</div>
+
+<!-- Language Switcher -->
+<div class="lang-switcher">
+  <button class="lang-btn active" data-lang="pt">PT</button>
+  <button class="lang-btn" data-lang="es">ES</button>
+  <button class="lang-btn" data-lang="en">EN</button>
+  <button class="lang-btn" data-lang="fr">FR</button>
+</div>
+
+<!-- Ticker -->
+<div class="ticker">
+  <div class="ticker-inner" id="ticker"></div>
+</div>
+
+<!-- Navigation -->
+<nav id="nav">
+  <div class="nav-logo">
+    <img src="images/logo-123.png" alt="Duck Musical Producer Logo">
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about" data-i18n="nav_about">Sobre</a></li>
+    <li><a href="#services" data-i18n="nav_services">Serviços</a></li>
+    <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
+    <li><a href="#studio" data-i18n="nav_studio">Estúdio</a></li>
+    <li><a href="#instruments" data-i18n="nav_instruments">Instrumentos</a></li>
+    <li><a href="#contact" data-i18n="nav_contact">Contato</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Main Content -->
+<main id="main">
+
+<!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="hero-bg-list" id="hero-bg-list">
+    <div class="hero-bg-item active" style="background-image:url('images/VERDE/capa-1920x1080.jpg')"></div>
+    <div class="hero-bg-item" style="background-image:url('images/VERDE/capa-3-1920x1080.jpg')"></div>
+    <div class="hero-bg-item" style="background-image:url('images/VERDE/capa-4-1920x1080.jpg')"></div>
+    <div class="hero-bg-item" style="background-image:url('images/VERDE/setup-2-1920x1280.jpg')"></div>
+    <div class="hero-bg-item" style="background-image:url('images/VERDE/mix-3-1920x1280.jpg')"></div>
+  </div>
+  <div class="hero-over"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-c">
+    <div class="hero-logo-wrap">
+      <img src="images/logo-123.png" alt="Duck Logo" class="hero-logo">
+    </div>
+    <h1 class="hero-h"><span>DUCK</span></h1>
+    <p class="hero-sub" data-i18n="hero_sub">Beatmaker · Mixagem · Masterização · 36M+ Streams</p>
+    <p class="hero-desc" data-i18n="hero_desc">Transformo a intenção do artista em arquitetura sonora de elite. Produção musical para artistas de nível nacional e internacional.</p>
+    <div class="hero-badges">
+      <div class="hero-badge"><span class="dot"></span> <span data-i18n="heroBadge1">36M+ STREAMS</span></div>
+      <div class="hero-badge"><span class="dot"></span> <span data-i18n="heroBadge2">40+ LANÇAMENTOS</span></div>
+      <div class="hero-badge"><span class="dot"></span> <span data-i18n="heroBadge3">1400+ SEGUIDORES</span></div>
+      <div class="hero-badge"><span class="dot"></span> <span data-i18n="heroBadge4">DESDE 2012</span></div>
+    </div>
+    <div class="hero-btns">
+      <button class="btn-p" onclick="document.getElementById('instruments').scrollIntoView({behavior:'smooth'})"><span data-i18n="hero_cta1">EXPLORAR ESTÚDIO</span></button>
+      <button class="btn-s" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"><span data-i18n="hero_cta2">CONTRATAR →</span></button>
+    </div>
+  </div>
+  <div class="hero-wf" id="heroWaveform"></div>
+  <div class="hero-coords">
+    <span>X:</span> -10.9091°S<br>
+    <span>Y:</span> -37.0671°W<br>
+    <span>NODE:</span> ARACAJU-PRIMARY<br>
+    <span>STATUS:</span> ONLINE
+  </div>
+  <div class="hero-scroll"><div class="scroll-line"></div><span>scroll</span></div>
+</section>
+
+<!-- Stats -->
+<div class="stats">
+  <div class="stat"><div class="stat-n" data-count="36">0</div><div class="stat-l" data-i18n="stat1">MILLION+ STREAMS</div></div>
+  <div class="stat"><div class="stat-n" data-count="40">0</div><div class="stat-l" data-i18n="stat2">LANÇAMENTOS</div></div>
+  <div class="stat"><div class="stat-n" data-count="1400">0</div><div class="stat-l" data-i18n="stat3">SEGUIDORES</div></div>
+</div>
+
+<!-- About -->
+<section class="sec" id="about">
+  <div class="sec-w">
+    <div class="sec-lbl" data-i18n="about_lbl">// 001 — SOBRE MIM</div>
+    <h2 class="sec-h" data-i18n="about_h">ONDE O <em>SOM</em><br>SE TORNA ARTE</h2>
+    <div class="about-g">
+      <div>
+        <div class="about-txt">
+          <p data-i18n="about_p1">Sou Duck — beatmaker, produtor musical e engenheiro de som de Aracaju, Sergipe. Desde 2012, dedico minha vida a transformar a visão dos artistas em experiências sonoras que marcam. Com mais de 36 milhões de streams e 40 lançamentos, construí minha carreira na interseção entre tecnologia de ponta e sensibilidade artística.</p>
+          <p data-i18n="about_p2">Não produzo apenas beats — construo universos sonoros. Cada frequência tem propósito, cada textura conta uma história. Meu processo começa muito antes do primeiro acorde: escuto o artista, entendo a intenção, e depois arquiteto o som que vai conectar com milhões de ouvintes.</p>
+          <p data-i18n="about_p3">Do beatmaking à mixagem, da masterização aos arranjos completos — ofereço um ecossistema de produção musical completo. Trabalho com artistas emergentes e consolidados do Brasil e do exterior, sempre com o mesmo compromisso: excelência em cada frequência.</p>
+        </div>
+        <div class="tl">
+          <div class="tl-i"><span class="tl-y">2012</span><span class="tl-d" data-i18n="tl1">Primeiras produções. Aprendendo as bases do beatmaking e da engenharia de som.</span></div>
+          <div class="tl-i"><span class="tl-y">2018</span><span class="tl-d" data-i18n="tl2">Primeiro milhão de streams. O reconhecimento chega e os artistas começam a procurar.</span></div>
+          <div class="tl-i"><span class="tl-y">2022</span><span class="tl-d" data-i18n="tl3">Estúdio profissional com 6 estações de trabalho. Capacidad de entrega completa.</span></div>
+          <div class="tl-i"><span class="tl-y">Hoje</span><span class="tl-d" data-i18n="tl5">36M+ streams. Produções para artistas do Brasil e exterior.</span></div>
+        </div>
+      </div>
+      <div class="about-img">
+        <img src="images/VERDE/capa-1920x1080.jpg" alt="Duck Studio">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services -->
+<section class="sec" id="services" style="background:var(--gd);">
+  <div class="sec-w">
+    <div class="sec-lbl" data-i18n="svc_lbl">// 002 — SERVIÇOS</div>
+    <h2 class="sec-h" data-i18n="svc_h">O QUE <em>FAÇO</em></h2>
+    <div class="svc-grid" id="services-grid"></div>
+  </div>
+</section>
+
+<!-- Studio -->
+<section class="studio-section" id="studio">
+  <div class="studio-hero">
+    <div class="studio-hero-bg"><img src="images/studio/setup-2-1920x1280.jpg" alt="Estudio"></div>
+    <div class="studio-hero-overlay"></div>
+    <div class="studio-hero-content">
+      <p class="studio-hero-label" data-i18n="studio_lbl">// 008 — ESTÚDIO</p>
+      <h2 class="studio-hero-title" data-i18n="studio_h">ONDE A<br><em>MÁGICA</em><br>ACONTECE</h2>
+      <p class="studio-hero-sub" data-i18n="studio_sub">Home Studio · Mix Station · Production · Recording · Mixing · Mastering</p>
+      <div class="studio-hero-stats">
+        <div class="studio-stat"><span class="studio-stat-num">6</span><span class="studio-stat-label" data-i18n="studio_s1">ESTAÇÕES</span></div>
+        <div class="studio-stat"><span class="studio-stat-num">48</span><span class="studio-stat-label" data-i18n="studio_s2">VIAS DE ÁUDIO</span></div>
+        <div class="studio-stat"><span class="studio-stat-num">96</span><span class="studio-stat-label" data-i18n="studio_s3">KHZ / 24-BIT</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="studio-stations">
+    <div class="studio-stations-header">
+      <h3 data-i18n="stations_h">ESTAÇÕES DE TRABALHO</h3>
+      <p data-i18n="stations_p">Cada estação tem um propósito específico.</p>
+    </div>
+    <div class="stations-grid" id="stations-grid"></div>
+  </div>
+
+  <div class="studio-gear">
+    <div class="gear-categories" id="gear-grid"></div>
+  </div>
+
+  <div class="studio-testimonials">
+    <div class="studio-testimonials-header">
+      <h3 data-i18n="test_h">O QUE DIZEM</h3>
+      <p data-i18n="test_p">Artistas que confiaram no processo.</p>
+    </div>
+    <div class="testimonials-grid" id="testimonials-grid"></div>
+  </div>
+
+  <div class="studio-cta">
+    <div class="studio-cta-content">
+      <h3 data-i18n="cta_h">PRONTO PARA CRIAR?</h3>
+      <p data-i18n="cta_p">Cada grande música começa com uma conversa. Me conte sua visão e transformemos em realidade.</p>
+      <div class="studio-cta-buttons">
+        <a href="#contact" class="studio-btn primary" data-i18n="cta1">AGENDAR SESSÃO</a>
+        <a href="https://instagram.com/duck4s" target="_blank" class="studio-btn secondary" data-i18n="cta2" rel="noopener noreferrer">VER MAIS NO INSTAGRAM</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Instruments -->
+<section class="instruments-section" id="instruments">
+  <div class="section-header">
+    <h2 data-i18n="inst_h"><em>Instrumentos</em> Interativos</h2>
+    <p data-i18n="inst_p">Experimente o estúdio pelo navegador</p>
+  </div>
+
+  <div class="piano-container">
+    <div class="piano-title"><span data-i18n="piano_t">Piano</span> <span data-i18n="piano_t2">Interativo</span></div>
+    <div class="piano" id="piano"></div>
+    <div class="piano-visualizer" id="piano-visualizer"></div>
+  </div>
+
+  <div class="rhythm-container">
+    <div class="rhythm-title"><span data-i18n="rhythm_t">Rhythm</span> <span data-i18n="rhythm_t2">Box</span></div>
+    <div class="rhythm-label">KICK</div>
+    <div class="rhythm-grid" id="kick-grid"></div>
+    <div class="rhythm-label">SNARE</div>
+    <div class="rhythm-grid" id="snare-grid"></div>
+    <div class="rhythm-label">HI-HAT</div>
+    <div class="rhythm-grid" id="hihat-grid"></div>
+    <div class="rhythm-controls">
+      <button class="rhythm-btn" id="clear-rhythm" data-i18n="rb_clear">LIMPAR</button>
+      <button class="rhythm-btn" id="random-rhythm" data-i18n="rb_random">ALEATÓRIO</button>
+      <button class="rhythm-btn play" id="play-rhythm"><span data-i18n="rb_play">▶ TOCAR</span></button>
+      <button class="rhythm-btn" id="stop-rhythm"><span data-i18n="rb_stop">■ PARAR</span></button>
+    </div>
+  </div>
+
+  <div class="voice-container">
+    <div class="voice-title"><span data-i18n="voice_t">Voz</span> <span data-i18n="voice_t2">Sintetizada</span></div>
+    <div class="voice-visualizer" id="voice-visualizer">
+      <div class="voice-wave" id="voice-wave"></div>
+    </div>
+    <div class="voice-controls">
+      <button class="voice-btn" id="voice-raw"><span data-i18n="vb_raw">VOZ RAW</span></button>
+      <button class="voice-btn" id="voice-music"><span data-i18n="vb_music">VOZ + ARRANJO</span></button>
+      <button class="voice-btn" id="voice-melody"><span data-i18n="vb_melody">MELODIA</span></button>
+      <button class="voice-btn" id="stop-voice"><span data-i18n="vb_stop">PARAR</span></button>
+    </div>
+  </div>
+
+  <div class="recorder-container">
+    <div class="recorder-title"><span data-i18n="rec_t">Voz</span> <span data-i18n="rec_t2">Gravador</span></div>
+    <div class="recorder-visualizer"><canvas id="recorder-canvas" width="800" height="200"></canvas></div>
+    <div class="recorder-status">
+      <div class="status-dot" id="status-dot"></div>
+      <span id="status-text" data-i18n="rec_ready">PRONTO PARA GRAVAR</span>
+      <span id="recording-time">00:00</span>
+    </div>
+    <div class="recorder-controls">
+      <button class="rec-btn record" id="record-btn"><span>●</span> <span data-i18n="rec_btn1">GRAVAR</span></button>
+      <button class="rec-btn stop" id="stop-rec-btn" disabled><span>■</span> <span data-i18n="rec_btn2">PARAR</span></button>
+      <button class="rec-btn play" id="play-rec-btn" disabled><span>▶</span> <span data-i18n="rec_btn3">TOCAR</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="sec" id="contact" style="background:var(--gd);">
+  <div class="sec-w">
+    <div class="sec-lbl">// 010 — CONTATO</div>
+    <h2 class="sec-h">VAMOS <em>CONVERSAR</em></h2>
+    <div class="contact-form">
+      <form id="contact-form">
+        <div class="form-group">
+          <input type="text" id="name" required placeholder=" ">
+          <label for="name">Nome</label>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" required placeholder=" ">
+          <label for="email">Email</label>
+        </div>
+        <div class="form-group">
+          <textarea id="message" rows="5" required placeholder=" "></textarea>
+          <label for="message">Mensagem</label>
+        </div>
+        <button type="submit" class="btn-primary">ENVIAR MENSAGEM</button>
+      </form>
+      <div class="contact-links">
+        <a href="https://instagram.com/duck4s" target="_blank" rel="noopener noreferrer" class="contact-link">INSTAGRAM</a>
+        <a href="mailto:contato@duckmusic.com.br" class="contact-link">EMAIL</a>
+        <a href="https://wa.me/5579999999999" target="_blank" rel="noopener noreferrer" class="contact-link">WHATSAPP</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Particles Container -->
+<div class="particles-container" id="particles"></div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="images/logo-123.png" alt="DUCK" class="footer-logo">
+      <p class="footer-tagline">Produção Musical Profissional</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://instagram.com/duck4s" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://open.spotify.com/artist/duck4x" target="_blank" rel="noopener noreferrer">Spotify</a>
+      <a href="https://music.apple.com/artist/duck4x" target="_blank" rel="noopener noreferrer">Apple Music</a>
+    </div>
+    <div class="footer-contact">
+      <a href="mailto:contato@duckmusic.com.br">contato@duckmusic.com.br</a>
+      <span>Aracaju, SE, Brasil</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 DUCK — Produção Musical. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+</body>
+</html>

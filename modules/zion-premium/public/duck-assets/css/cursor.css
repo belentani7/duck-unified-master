@@ -1,0 +1,16 @@
+/* Custom Cursor Trail - Enhanced */
+.cursor-trail {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(154,203,107,.3);
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform .1s ease;
+  mix-blend-mode: difference;
+}
+
+@media (max-width: 768px) {
+  .cursor-trail { display: none; }
+}

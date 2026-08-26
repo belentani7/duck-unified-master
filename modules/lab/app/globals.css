@@ -1,0 +1,439 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+  /* Duck Lab - Tema Verde Esmeralda */
+  --background: oklch(0.098 0.015 160);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.14 0.02 160);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.16 0.025 160);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: #10B981;
+  --primary-foreground: oklch(0.098 0.015 160);
+  --secondary: oklch(0.18 0.03 160);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.2 0.035 160);
+  --muted-foreground: oklch(0.7 0.02 160);
+  --accent: oklch(0.22 0.04 160);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.25 0.04 160);
+  --input: oklch(0.25 0.04 160);
+  --ring: #10B981;
+  --chart-1: #10B981;
+  --chart-2: oklch(0.65 0.2 150);
+  --chart-3: oklch(0.55 0.15 140);
+  --chart-4: oklch(0.7 0.18 170);
+  --chart-5: oklch(0.6 0.22 155);
+  --sidebar: oklch(0.12 0.02 160);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: #10B981;
+  --sidebar-primary-foreground: oklch(0.098 0.015 160);
+  --sidebar-accent: oklch(0.2 0.035 160);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.25 0.04 160);
+  --sidebar-ring: #10B981;
+}
+
+.dark {
+  /* Duck Lab Dark - Verde Esmeralda Intenso */
+  --background: oklch(0.08 0.015 160);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.12 0.02 160);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.14 0.025 160);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: #34D399;
+  --primary-foreground: oklch(0.08 0.015 160);
+  --secondary: oklch(0.16 0.03 160);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.18 0.035 160);
+  --muted-foreground: oklch(0.65 0.02 160);
+  --accent: oklch(0.2 0.04 160);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(0.22 0.04 160);
+  --input: oklch(0.22 0.04 160);
+  --ring: #10B981;
+  --chart-1: #10B981;
+  --chart-2: oklch(0.6 0.2 150);
+  --chart-3: oklch(0.5 0.15 140);
+  --chart-4: oklch(0.65 0.18 170);
+  --chart-5: oklch(0.55 0.22 155);
+  --sidebar: oklch(0.1 0.02 160);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: #34D399;
+  --sidebar-primary-foreground: oklch(0.08 0.015 160);
+  --sidebar-accent: oklch(0.18 0.035 160);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.22 0.04 160);
+  --sidebar-ring: #10B981;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Duck Lab DAW Custom Styles */
+@layer utilities {
+  /* Waveform visualization */
+  .waveform-bar {
+    background: linear-gradient(to top, #10B981, #34D399);
+    transition: height 0.05s ease;
+  }
+  
+  .waveform-bar:hover {
+    background: linear-gradient(to top, #059669, #10B981);
+  }
+
+  /* Track lane styling */
+  .track-lane {
+    background: linear-gradient(90deg, oklch(0.15 0.02 160) 0%, oklch(0.18 0.025 160) 100%);
+    border-bottom: 1px solid oklch(0.25 0.04 160);
+  }
+
+  .track-lane:hover {
+    background: linear-gradient(90deg, oklch(0.18 0.03 160) 0%, oklch(0.2 0.035 160) 100%);
+  }
+
+  .track-lane.selected {
+    background: linear-gradient(90deg, oklch(0.2 0.04 160) 0%, oklch(0.22 0.045 160) 100%);
+    box-shadow: inset 0 0 0 2px #10B981;
+  }
+
+  /* Clip styling */
+  .audio-clip {
+    background: linear-gradient(135deg, #059669 0%, #10B981 50%, #34D399 100%);
+    border-radius: 4px;
+    cursor: grab;
+    transition: all 0.15s ease;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+  }
+
+  .audio-clip:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.5);
+  }
+
+  .audio-clip:active {
+    cursor: grabbing;
+  }
+
+  .audio-clip.selected {
+    outline: 2px solid #34D399;
+    outline-offset: 2px;
+  }
+
+  /* Transport button glow */
+  .transport-btn {
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .transport-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.3) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .transport-btn:hover::before {
+    opacity: 1;
+  }
+
+  .transport-btn.active {
+    background: #10B981 !important;
+    color: #000;
+  }
+
+  /* Record button pulse */
+  .record-btn.recording {
+    animation: recordPulse 1s ease-in-out infinite;
+  }
+
+  @keyframes recordPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+    50% { box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+  }
+
+  /* Playhead */
+  .playhead {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: #EF4444;
+    z-index: 50;
+    pointer-events: none;
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.6);
+  }
+
+  .playhead::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: -6px;
+    width: 14px;
+    height: 14px;
+    background: #EF4444;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+  }
+
+  /* Timeline grid */
+  .timeline-grid {
+    background-image: 
+      linear-gradient(to right, oklch(0.25 0.04 160) 1px, transparent 1px),
+      linear-gradient(to bottom, oklch(0.25 0.04 160) 1px, transparent 1px);
+    background-size: 50px 40px;
+  }
+
+  /* Meter styling */
+  .meter-bar {
+    background: linear-gradient(to top, 
+      #22C55E 0%, 
+      #EAB308 60%, 
+      #F97316 80%, 
+      #EF4444 100%
+    );
+    transition: height 0.05s ease;
+  }
+
+  .meter-bar.peak {
+    background: #EF4444;
+  }
+
+  /* Fader slider custom */
+  .fader-vertical {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8px;
+    height: 120px;
+    background: oklch(0.25 0.04 160);
+    border-radius: 4px;
+    outline: none;
+    writing-mode: bt-lr;
+    -webkit-writing-mode: vertical-lr;
+  }
+
+  .fader-vertical::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 16px;
+    background: linear-gradient(180deg, #34D399 0%, #10B981 100%);
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .fader-vertical::-moz-range-thumb {
+    width: 24px;
+    height: 16px;
+    background: linear-gradient(180deg, #34D399 0%, #10B981 100%);
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Knob control */
+  .knob-control {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: conic-gradient(from 220deg, #10B981 0deg, #059669 280deg, oklch(0.25 0.04 160) 280deg);
+    position: relative;
+    cursor: pointer;
+    box-shadow: 
+      0 2px 8px rgba(0, 0, 0, 0.3),
+      inset 0 1px 2px rgba(255, 255, 255, 0.1);
+  }
+
+  .knob-control::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 12px;
+    background: white;
+    border-radius: 2px;
+  }
+
+  /* Scrollbar styling for DAW panels */
+  .daw-scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  .daw-scrollbar::-webkit-scrollbar-track {
+    background: oklch(0.15 0.02 160);
+    border-radius: 5px;
+  }
+
+  .daw-scrollbar::-webkit-scrollbar-thumb {
+    background: oklch(0.3 0.04 160);
+    border-radius: 5px;
+  }
+
+  .daw-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: oklch(0.35 0.05 160);
+  }
+
+  /* Glow effects */
+  .glow-emerald {
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4), 0 0 40px rgba(16, 185, 129, 0.2);
+  }
+
+  .glow-emerald-sm {
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+  }
+
+  /* Panel headers */
+  .panel-header {
+    background: linear-gradient(180deg, oklch(0.18 0.03 160) 0%, oklch(0.15 0.025 160) 100%);
+    border-bottom: 1px solid oklch(0.28 0.05 160);
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #10B981;
+  }
+
+  /* Asset card hover effect */
+  .asset-card {
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+  }
+
+  .asset-card:hover {
+    border-color: #10B981;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(16, 185, 129, 0.25);
+  }
+
+  /* Loop region indicator */
+  .loop-region {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px dashed #10B981;
+    border-radius: 4px;
+  }
+
+  /* Time ruler markers */
+  .time-marker {
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background: oklch(0.3 0.04 160);
+  }
+
+  .time-marker.major {
+    background: oklch(0.4 0.05 160);
+  }
+
+  /* Status indicator */
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    animation: statusPulse 2s ease-in-out infinite;
+  }
+
+  .status-dot.online {
+    background: #22C55E;
+  }
+
+  .status-dot.recording {
+    background: #EF4444;
+    animation: recordPulse 1s ease-in-out infinite;
+  }
+
+  @keyframes statusPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+  }
+
+  /* Piano roll grid */
+  .piano-roll-key {
+    border-bottom: 1px solid oklch(0.25 0.04 160);
+    font-size: 10px;
+    padding: 4px 8px;
+    color: oklch(0.7 0.02 160);
+  }
+
+  .piano-roll-key.black {
+    background: oklch(0.18 0.02 160);
+  }
+
+  .piano-roll-key.white {
+    background: oklch(0.22 0.025 160);
+  }
+
+  /* Note in piano roll */
+  .piano-note {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    border-radius: 3px;
+    position: absolute;
+    height: 20px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+  }
+
+  .piano-note:hover {
+    filter: brightness(1.2);
+  }
+}

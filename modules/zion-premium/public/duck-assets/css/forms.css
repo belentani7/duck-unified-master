@@ -1,0 +1,90 @@
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+  background: #080e08;
+  border: 1px solid rgba(154,203,107,.15);
+  color: #efe7d0;
+  font-family: 'Inter', sans-serif;
+  font-size: .85rem;
+  transition: border-color .3s;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #9acb6b;
+}
+
+.form-group label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  font-size: .75rem;
+  color: rgba(239,231,208,.3);
+  pointer-events: none;
+  transition: all .3s;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -0.5rem;
+  left: 0.8rem;
+  font-size: .6rem;
+  color: #9acb6b;
+  background: #080e08;
+  padding: 0 0.3rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn-primary {
+  font-size: .62rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  background: #9acb6b;
+  color: #080e08;
+  border: none;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: all .3s;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #efe7d0;
+  transform: translateX(-101%);
+  transition: transform .4s;
+}
+
+.btn-primary:hover::before {
+  transform: translateX(0);
+}
+
+.btn-primary span {
+  position: relative;
+  z-index: 1;
+}

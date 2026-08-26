@@ -1,0 +1,118 @@
+/* Color Scheme */
+:root {
+  --dark-background: #1a1d23;
+  --green-accent: #34c759;
+}
+
+/* Card Base */
+.card-base {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: var(--dark-background);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card Hover */
+.card-hover {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: var(--dark-background);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  border-color: var(--green-accent);
+  box-shadow: 0 4px 12px rgba(52, 199, 89, 0.4);
+}
+
+/* Card Glass */
+.card-glass {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-glass:hover {
+  transform: translateY(-4px);
+  border-color: var(--green-accent);
+  box-shadow: 0 4px 12px rgba(52, 199, 89, 0.4), 0 0 20px rgba(0, 0, 0, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Image */
+.card-image {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-image img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-image:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}
+
+.card-image .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark-background);
+  opacity: 0;
+  padding: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-image:hover .image-overlay {
+  opacity: 0.7;
+}
+
+.card-image .image-overlay h2 {
+  color: var(--green-accent);
+  transform: translateY(20px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-image:hover .image-overlay h2 {
+  transform: translateY(0);
+}
+
+/* Card Featured */
+.card-featured {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: var(--dark-background);
+  border: 2px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-featured {
+  border-image-source: linear-gradient(45deg, var(--green-accent), var(--green-accent));
+  border-image-slice: 1;
+}
+
+.card-featured:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(52, 199, 89, 0.4);
+}
+
+/* Card Hover Shine */
+.tc-shine{position:relative;overflow:hidden;}
+.tc-shine::after{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle at 50% 50%,rgba(255,255,255,.08) 0%,transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none;}
+.tc-shine:hover::after{opacity:1;}

@@ -1,0 +1,87 @@
+/* Skip navigation link */
+.skip-nav {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.skip-nav:focus {
+  top: 0;
+}
+
+/* Focus visible styles */
+.focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+/* Reduced motion media query */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode */
+.high-contrast {
+  filter: invert(100%);
+}
+
+/* Screen reader only class */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  border: 1px solid #000;
+}
+
+/* ARIA live region styles */
+.aria-live-region {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.aria-live-region[aria-live="assertive"] {
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+.aria-live-region[aria-live="polite"] {
+  background-color: #f0f0f0;
+  color: #666;
+  padding: 5px;
+  border: 1px solid #ccc;
+}

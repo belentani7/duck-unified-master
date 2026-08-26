@@ -1,0 +1,1401 @@
+# PROMPT MESTRE — AMPLIAÇÃO MÁXIMA DO DUCK
+
+## MISSÃO PRINCIPAL
+
+Você está trabalhando sobre um projeto EXISTENTE chamado:
+
+**DUCK — Beats, Produção e Portal de Clientes**
+
+Não reinicie o projeto.
+
+Não substitua arbitrariamente o que já funciona.
+
+Não crie uma demonstração fictícia.
+
+Não transforme a aplicação em um conjunto de telas bonitas sem funcionamento real.
+
+Sua missão é transformar o projeto existente em uma **plataforma digital operacional, modular, auditável, comercializável, extensível e progressivamente autônoma**, preservando o legado funcional já construído.
+
+A prioridade é:
+
+**FUNCIONAMENTO REAL > ARQUITETURA SÓLIDA > AUTOMAÇÃO > SEGURANÇA > AUDITORIA > EXPERIÊNCIA > ESTÉTICA**
+
+Tudo aquilo que não contribua para esses objetivos deve ser removido, simplificado ou colocado em segundo plano.
+
+---
+
+# 1. REGRA FUNDAMENTAL: AUDITAR ANTES DE ALTERAR
+
+Antes de implementar qualquer ampliação, faça uma auditoria profunda do projeto atual.
+
+Não presuma que algo não existe.
+
+Não presuma que algo funciona apenas porque existe uma interface.
+
+Não presuma que algo está conectado porque existe um botão.
+
+Mapeie:
+
+* frontend;
+* backend;
+* banco de dados;
+* autenticação;
+* autorização;
+* rotas;
+* APIs;
+* integrações;
+* variáveis de ambiente;
+* secrets;
+* webhooks;
+* armazenamento;
+* uploads;
+* downloads;
+* players;
+* catálogo;
+* clientes;
+* produtos;
+* licenças;
+* checkout;
+* pagamentos;
+* portfólio;
+* Beat Lab;
+* explorador de beats;
+* portal;
+* controle dos três nós;
+* automações;
+* jobs;
+* filas;
+* logs;
+* tratamento de erros;
+* componentes;
+* dependências;
+* scripts;
+* testes;
+* documentação;
+* GitHub;
+* configuração de deploy;
+* responsividade;
+* acessibilidade;
+* SEO;
+* performance;
+* segurança.
+
+Classifique cada componente como:
+
+1. **REAL E FUNCIONAL**
+2. **REAL MAS INCOMPLETO**
+3. **IMPLEMENTADO PARCIALMENTE**
+4. **MOCK / PLACEHOLDER**
+5. **QUEBRADO**
+6. **DUPLICADO**
+7. **OBSOLETO**
+8. **DEPENDENTE DE CREDENCIAL EXTERNA**
+9. **DEPENDENTE DE ATIVO EXTERNO**
+10. **NÃO NECESSÁRIO**
+
+Crie internamente uma matriz de auditoria e utilize-a para decidir o que deve ser preservado, corrigido, substituído ou removido.
+
+---
+
+# 2. AUDITORIA MASSIVA
+
+Faça uma auditoria em múltiplas camadas.
+
+## Auditoria de código
+
+Verifique:
+
+* bugs;
+* dead code;
+* código duplicado;
+* componentes órfãos;
+* imports desnecessários;
+* dependências desnecessárias;
+* problemas de tipagem;
+* tratamento incorreto de erros;
+* estados inconsistentes;
+* race conditions;
+* problemas assíncronos;
+* memory leaks;
+* problemas de cache;
+* chamadas redundantes;
+* endpoints inconsistentes;
+* validações ausentes;
+* problemas de segurança.
+
+## Auditoria de arquitetura
+
+Verifique se:
+
+* frontend e backend estão adequadamente separados;
+* regras de negócio estão centralizadas;
+* dados críticos não dependem do frontend;
+* permissões são verificadas no servidor;
+* operações financeiras são idempotentes;
+* webhooks podem ser reprocessados com segurança;
+* jobs podem ser retomados;
+* falhas não corrompem o estado;
+* serviços podem ser substituídos futuramente.
+
+## Auditoria de segurança
+
+Verifique:
+
+* autenticação;
+* autorização;
+* controle de sessão;
+* exposição de secrets;
+* variáveis de ambiente;
+* uploads;
+* downloads;
+* URLs privadas;
+* acesso a arquivos;
+* SQL/NoSQL injection;
+* XSS;
+* CSRF;
+* SSRF;
+* abuso de endpoints;
+* rate limiting;
+* validação de arquivos;
+* permissões administrativas;
+* logs contendo informações sensíveis.
+
+Nunca coloque secrets no frontend.
+
+Nunca faça uma integração parecer funcional quando as credenciais reais não existem.
+
+---
+
+# 3. AUDITORIA FINANCEIRA E COMERCIAL
+
+A plataforma deve ser construída para poder gerar receita real.
+
+Crie uma arquitetura comercial que permita:
+
+### Produtos
+
+* beats;
+* licenças;
+* produções;
+* serviços;
+* pacotes;
+* presets;
+* arquivos digitais;
+* serviços personalizados;
+* produtos futuros.
+
+Cada produto deve possuir:
+
+* ID;
+* nome;
+* descrição;
+* categoria;
+* preço;
+* moeda;
+* disponibilidade;
+* status;
+* licença associada;
+* arquivos associados;
+* versão;
+* data de criação;
+* data de atualização.
+
+---
+
+# 4. SISTEMA DE LICENÇAS
+
+Criar uma arquitetura real para licenciamento.
+
+Suportar diferentes níveis, por exemplo:
+
+* licença básica;
+* licença comercial;
+* licença premium;
+* exclusividade;
+* customizada.
+
+Não invente termos jurídicos.
+
+Permita que os termos reais sejam configurados pelo administrador.
+
+Cada licença deve poder registrar:
+
+* produto;
+* comprador;
+* data;
+* preço;
+* condições;
+* número de licença;
+* arquivos autorizados;
+* território, quando aplicável;
+* limitações;
+* status;
+* versão dos termos.
+
+Gerar histórico de alterações.
+
+---
+
+# 5. MOTOR COMERCIAL
+
+Criar a estrutura para:
+
+**VISITA → DESCOBERTA → INTERESSE → PRODUTO → LICENÇA → CHECKOUT → PAGAMENTO → ENTREGA → PÓS-VENDA**
+
+O sistema deve registrar cada etapa.
+
+Criar eventos como:
+
+* visitante visualizou produto;
+* reproduziu preview;
+* adicionou ao carrinho;
+* iniciou checkout;
+* concluiu compra;
+* recebeu arquivo;
+* abriu portal;
+* utilizou determinado recurso.
+
+Esses eventos devem alimentar métricas e automações.
+
+---
+
+# 6. CHECKOUT E PAGAMENTOS
+
+Preparar arquitetura para integração real com provedores de pagamento.
+
+Não simular pagamento.
+
+Quando as credenciais não estiverem disponíveis:
+
+* implementar a arquitetura;
+* deixar integração claramente identificada como pendente;
+* criar ambiente de teste quando suportado;
+* documentar exatamente o que falta.
+
+O sistema deve ser preparado para:
+
+* confirmação de pagamento;
+* cancelamento;
+* reembolso;
+* webhook;
+* idempotência;
+* recibo;
+* histórico;
+* reconciliação.
+
+---
+
+# 7. PORTAL DE CLIENTES
+
+Transformar o portal em uma área operacional real.
+
+O cliente deve poder visualizar:
+
+* perfil;
+* compras;
+* licenças;
+* downloads;
+* arquivos;
+* projetos;
+* pedidos;
+* histórico;
+* documentos;
+* suporte;
+* status dos serviços.
+
+Criar arquitetura para entrega segura de arquivos.
+
+Não disponibilizar arquivos premium por URLs públicas permanentes quando isso puder ser evitado.
+
+---
+
+# 8. BEAT LAB
+
+Ampliar o Beat Lab para ser uma ferramenta real de trabalho.
+
+Possibilitar futuramente:
+
+* seleção de beat;
+* preview;
+* BPM;
+* tonalidade;
+* tags;
+* gêneros;
+* moods;
+* instrumentos;
+* stems quando disponíveis;
+* versões;
+* favoritos;
+* projetos;
+* histórico.
+
+Criar estrutura para busca e filtros.
+
+Não inventar áudio.
+
+Se não houver áudio autorizado, usar estado claramente identificado como vazio ou pendente.
+
+---
+
+# 9. EXPLORADOR DE BEATS
+
+Criar experiência semelhante a um catálogo profissional.
+
+Cada beat deve permitir:
+
+* preview;
+* informações técnicas;
+* BPM;
+* tonalidade;
+* duração;
+* gênero;
+* tags;
+* licença;
+* preço;
+* disponibilidade;
+* favoritos;
+* comparação.
+
+Adicionar pesquisa eficiente.
+
+Adicionar filtros combináveis.
+
+Preparar indexação futura.
+
+---
+
+# 10. PORTFÓLIO
+
+O portfólio deve utilizar exclusivamente:
+
+* trabalhos reais;
+* imagens autorizadas;
+* créditos fornecidos;
+* informações verificáveis.
+
+Quando o material não estiver disponível:
+
+**NÃO INVENTAR.**
+
+Criar placeholders elegantes e claramente identificados internamente como conteúdo pendente.
+
+---
+
+# 11. SISTEMA DE ATIVOS DIGITAIS
+
+Criar um gerenciamento centralizado de:
+
+* áudio;
+* imagens;
+* capas;
+* vídeos;
+* presets;
+* documentos;
+* arquivos de clientes;
+* arquivos de produto.
+
+Cada ativo deve possuir:
+
+* ID;
+* proprietário;
+* categoria;
+* versão;
+* hash quando apropriado;
+* tamanho;
+* MIME type;
+* data;
+* status;
+* permissões.
+
+Preparar arquitetura para armazenamento externo.
+
+---
+
+# 12. AUTOMAÇÕES
+
+Construir um verdadeiro motor de automação.
+
+A plataforma deve poder reagir a eventos.
+
+Exemplos:
+
+**EVENTO → CONDIÇÃO → AÇÃO**
+
+Exemplo:
+
+Compra realizada
+→ pagamento confirmado
+→ gerar pedido
+→ gerar licença
+→ liberar arquivos
+→ enviar comunicação
+→ registrar evento
+→ atualizar métricas.
+
+Outro:
+
+Cliente iniciou checkout
+→ não concluiu
+→ esperar período configurável
+→ verificar novamente
+→ executar ação autorizada.
+
+Não criar spam.
+
+Todas as automações comerciais devem ser configuráveis e desativáveis.
+
+---
+
+# 13. AUTOMAÇÃO DE VENDAS
+
+Criar infraestrutura para:
+
+* leads;
+* clientes;
+* oportunidades;
+* carrinho;
+* checkout;
+* pós-venda;
+* recompra;
+* upsell;
+* cross-sell;
+* recuperação de checkout;
+* relacionamento.
+
+Não criar mensagens enganosas.
+
+Não criar falsas urgências.
+
+Não fabricar prova social.
+
+---
+
+# 14. CRM LEVE
+
+Criar um CRM interno simples e poderoso.
+
+Registrar:
+
+* lead;
+* cliente;
+* origem;
+* interesses;
+* produtos vistos;
+* compras;
+* tickets;
+* projetos;
+* eventos;
+* status;
+* notas internas.
+
+Preparar segmentação.
+
+---
+
+# 15. MÁQUINA DE AUTOMAÇÃO OPERACIONAL
+
+Criar uma camada central chamada conceitualmente de:
+
+**DUCK OPERATING CORE**
+
+Ela deve coordenar:
+
+* eventos;
+* tarefas;
+* automações;
+* jobs;
+* integrações;
+* auditorias;
+* notificações;
+* métricas.
+
+A arquitetura deve permitir adicionar novos módulos sem reescrever a plataforma.
+
+---
+
+# 16. AUTONOMIA OPERACIONAL
+
+O objetivo é criar autonomia de SOFTWARE, não fingir que existe uma máquina física.
+
+A plataforma deve ser capaz de:
+
+* detectar eventos;
+* executar tarefas;
+* verificar resultados;
+* registrar falhas;
+* tentar novamente quando seguro;
+* produzir logs;
+* pedir intervenção humana quando necessário;
+* continuar tarefas independentes;
+* gerar relatórios;
+* identificar pendências.
+
+Criar níveis de autonomia:
+
+### Nível 0
+
+Somente operação manual.
+
+### Nível 1
+
+Sugestões automáticas.
+
+### Nível 2
+
+Execução automática de tarefas simples.
+
+### Nível 3
+
+Workflows completos com supervisão.
+
+### Nível 4
+
+Operação altamente automatizada com exceções humanas.
+
+Nunca ultrapassar limites de segurança, financeiros ou legais automaticamente.
+
+---
+
+# 17. HUMAN-IN-THE-LOOP
+
+Toda operação sensível deve possuir controle humano.
+
+Exemplos:
+
+* grandes pagamentos;
+* alterações de preço;
+* exclusão de dados;
+* publicação;
+* alterações legais;
+* reembolsos;
+* mudanças de credenciais;
+* integrações externas;
+* ações irreversíveis.
+
+Criar aprovação quando necessária.
+
+---
+
+# 18. SISTEMA DE TAREFAS
+
+Criar um task engine.
+
+Cada tarefa deve possuir:
+
+* ID;
+* tipo;
+* prioridade;
+* status;
+* origem;
+* tentativa;
+* máximo de tentativas;
+* timestamps;
+* resultado;
+* erro;
+* dependências.
+
+Estados:
+
+* pending;
+* running;
+* paused;
+* completed;
+* failed;
+* cancelled;
+* awaiting_approval.
+
+---
+
+# 19. FILAS E JOBS
+
+Preparar arquitetura para processamento assíncrono.
+
+Jobs devem ser:
+
+* idempotentes;
+* observáveis;
+* reprocessáveis;
+* canceláveis quando possível.
+
+Criar mecanismo de retry com backoff.
+
+---
+
+# 20. OBSERVABILIDADE
+
+Implementar:
+
+* logs;
+* eventos;
+* métricas;
+* health checks;
+* status dos serviços;
+* erros;
+* duração das tarefas;
+* taxa de sucesso;
+* taxa de falha.
+
+Criar painel administrativo de saúde do sistema.
+
+---
+
+# 21. AUDITORIA PERMANENTE
+
+A auditoria não deve acontecer apenas uma vez.
+
+Criar conceito de:
+
+**CONTINUOUS AUDIT**
+
+Verificar continuamente:
+
+* serviços;
+* endpoints;
+* banco;
+* integrações;
+* jobs;
+* pagamentos;
+* armazenamento;
+* permissões;
+* erros;
+* desempenho.
+
+Quando possível, gerar alertas.
+
+---
+
+# 22. DASHBOARD EXECUTIVO
+
+Criar painel administrativo com:
+
+### VISÃO GERAL
+
+* receita;
+* pedidos;
+* clientes;
+* leads;
+* produtos;
+* conversão;
+* tickets;
+* tarefas;
+* erros;
+* automações.
+
+### SISTEMA
+
+* saúde;
+* uptime;
+* jobs;
+* filas;
+* integrações;
+* armazenamento;
+* erros.
+
+### COMERCIAL
+
+* vendas;
+* produtos mais vendidos;
+* abandono;
+* conversão;
+* ticket médio.
+
+Não inventar métricas.
+
+Mostrar zero ou “sem dados” quando não houver dados.
+
+---
+
+# 23. SISTEMA MULTILÍNGUE
+
+## ADMINISTRAÇÃO
+
+A plataforma interna deve ser integralmente em:
+
+**PORTUGUÊS DO BRASIL**
+
+Isso inclui:
+
+* menus;
+* dashboards;
+* mensagens;
+* formulários;
+* erros;
+* configurações;
+* documentação operacional;
+* nomenclatura visual.
+
+## SITE PÚBLICO
+
+Preparar internacionalização:
+
+**Português do Brasil**
+**Español**
+**English**
+
+Português deve ser o idioma padrão.
+
+Espanhol e inglês devem ser opcionais.
+
+Não duplicar lógica de negócio para cada idioma.
+
+Usar sistema de tradução centralizado.
+
+URLs podem ser estruturadas para SEO internacional quando isso realmente trouxer benefício.
+
+---
+
+# 24. DESIGN SYSTEM
+
+Preservar a identidade visual existente quando ela estiver funcionando.
+
+Criar um design system consistente:
+
+* cores;
+* tipografia;
+* espaçamento;
+* cards;
+* botões;
+* formulários;
+* tabelas;
+* modais;
+* estados;
+* notificações;
+* loading;
+* empty states;
+* erros.
+
+A estética deve transmitir:
+
+**premium + musical + tecnológico + artístico + profissional**
+
+Evitar excesso de efeitos que prejudiquem performance.
+
+---
+
+# 25. RESPONSIVIDADE
+
+Garantir funcionamento em:
+
+* desktop;
+* notebook;
+* tablet;
+* mobile.
+
+Não criar uma versão mobile completamente diferente sem necessidade.
+
+---
+
+# 26. PERFORMANCE
+
+Auditar:
+
+* bundle;
+* imagens;
+* lazy loading;
+* cache;
+* requests;
+* banco;
+* queries;
+* assets;
+* fontes;
+* renderização.
+
+Eliminar gargalos reais.
+
+Não otimizar prematuramente componentes que não representam problema.
+
+---
+
+# 27. SEO
+
+Para o site público:
+
+* metadata;
+* Open Graph;
+* sitemap;
+* robots;
+* URLs amigáveis;
+* canonical;
+* dados estruturados quando apropriado;
+* páginas indexáveis;
+* conteúdo multilíngue corretamente estruturado.
+
+Área privada não deve ser indexada.
+
+---
+
+# 28. ACESSIBILIDADE
+
+Implementar boas práticas:
+
+* navegação por teclado;
+* contraste;
+* labels;
+* foco;
+* semântica;
+* leitores de tela;
+* mensagens de erro compreensíveis.
+
+---
+
+# 29. GITHUB E LEGADO
+
+Preservar o histórico do projeto.
+
+Antes de alterações grandes:
+
+* identificar estado atual;
+* criar checkpoint;
+* documentar mudanças;
+* manter commits organizados.
+
+Não apagar arbitrariamente funcionalidades existentes.
+
+Não fazer uma reescrita total apenas porque uma nova arquitetura parece mais elegante.
+
+Evolua o legado.
+
+Quando uma substituição for realmente necessária:
+
+**LEGADO → ADAPTADOR → NOVO SISTEMA**
+
+sempre que possível.
+
+---
+
+# 30. DOCUMENTAÇÃO AUTOMÁTICA
+
+Criar documentação técnica mínima:
+
+* arquitetura;
+* instalação;
+* ambiente;
+* variáveis;
+* banco;
+* APIs;
+* integrações;
+* jobs;
+* automações;
+* permissões;
+* deploy;
+* recuperação;
+* troubleshooting.
+
+Criar também:
+
+**WHAT EXISTS**
+
+**WHAT WORKS**
+
+**WHAT IS MOCK**
+
+**WHAT IS BLOCKED**
+
+**WHAT NEEDS CREDENTIALS**
+
+**WHAT NEEDS HUMAN ACTION**
+
+---
+
+# 31. INTEGRAÇÕES EXTERNAS
+
+Não introduza dependências externas simplesmente porque parecem interessantes.
+
+Para cada integração perguntar internamente:
+
+1. É necessária?
+2. Traz valor real?
+3. Pode ser substituída?
+4. Existe alternativa local?
+5. Cria lock-in?
+6. Exige credenciais?
+7. Possui custo?
+8. É segura?
+9. É estável?
+10. Pode ser desligada?
+
+Só implementar quando houver benefício claro.
+
+---
+
+# 32. SHOPIFY
+
+A integração Shopify mencionada anteriormente está bloqueada por permissões de storefront.
+
+Não falsifique essa integração.
+
+Faça o máximo possível sem credenciais:
+
+* preparar adapter;
+* criar configuração;
+* criar interface de integração;
+* documentar permissões;
+* criar modo de teste quando possível.
+
+Quando a permissão real estiver disponível:
+
+ativar a integração sem reconstruir o sistema.
+
+---
+
+# 33. ARQUITETURA DE ADAPTERS
+
+Para integrações externas, utilizar uma camada de abstração.
+
+Exemplo conceitual:
+
+```text
+DUCK CORE
+   ↓
+INTEGRATION ADAPTER
+   ↓
+PROVIDER
+```
+
+Assim será possível trocar futuramente:
+
+* pagamento;
+* armazenamento;
+* email;
+* ecommerce;
+* analytics;
+* autenticação;
+* IA.
+
+Sem reescrever o núcleo.
+
+---
+
+# 34. IA COMO COMPONENTE, NÃO COMO DEPENDÊNCIA ABSOLUTA
+
+Preparar o sistema para utilização de modelos de IA quando isso trouxer benefício.
+
+Mas:
+
+**O DUCK NÃO DEVE DEPENDER DE UMA ÚNICA API DE IA PARA EXISTIR.**
+
+Regras de negócio críticas devem funcionar sem IA.
+
+A IA deve ser um acelerador.
+
+Criar uma camada abstrata:
+
+```text
+AI ORCHESTRATOR
+      ↓
+MODEL ADAPTER
+      ↓
+PROVIDER
+```
+
+Isso permite trocar modelos futuramente.
+
+---
+
+# 35. FALLBACK
+
+Sempre que possível:
+
+**serviço externo indisponível → fallback seguro**
+
+Nunca:
+
+**serviço externo indisponível → sistema inteiro quebrado**
+
+---
+
+# 36. DADOS E PORTABILIDADE
+
+Evitar lock-in.
+
+Os dados importantes devem poder ser exportados.
+
+Preparar exportação de:
+
+* clientes;
+* pedidos;
+* produtos;
+* licenças;
+* eventos;
+* métricas;
+* configurações.
+
+---
+
+# 37. BACKUP E RECUPERAÇÃO
+
+Preparar:
+
+* backup;
+* restauração;
+* versionamento;
+* recuperação de configuração;
+* documentação de disaster recovery.
+
+Não declarar que existe backup real se a infraestrutura ainda não estiver configurada.
+
+---
+
+# 38. SEGURANÇA FINANCEIRA
+
+Nunca executar automaticamente ações financeiras perigosas.
+
+Criar:
+
+* limites;
+* aprovação;
+* logs;
+* idempotência;
+* reconciliação;
+* trilha de auditoria.
+
+A autonomia financeira deve significar:
+
+**capacidade de operar processos comerciais automaticamente**
+
+e não:
+
+**capacidade irrestrita de movimentar dinheiro sem controle.**
+
+---
+
+# 39. "LEGADO"
+
+Trate o projeto existente como um ativo.
+
+Tudo que já funciona e possui valor deve ser preservado.
+
+Criar mentalidade:
+
+**BUILD → MEASURE → AUDIT → IMPROVE → PRESERVE**
+
+Não:
+
+**BUILD → DISCARD → REBUILD**
+
+---
+
+# 40. AMPLIFICAÇÃO
+
+Amplifique somente aquilo que já demonstrar valor.
+
+Se uma funcionalidade:
+
+* melhora conversão;
+* reduz trabalho;
+* reduz erros;
+* melhora experiência;
+* melhora segurança;
+* melhora capacidade operacional;
+
+ela pode ser ampliada.
+
+Se apenas adiciona complexidade estética:
+
+**não ampliar.**
+
+---
+
+# 41. PRIORIZAÇÃO
+
+Classifique as melhorias:
+
+### P0 — CRÍTICO
+
+Segurança, dados, pagamentos, corrupção de estado, bugs graves.
+
+### P1 — ALTO VALOR
+
+Venda, checkout, clientes, automações, portal, ativos.
+
+### P2 — OPERACIONAL
+
+Dashboard, auditoria, observabilidade, documentação.
+
+### P3 — EXPERIÊNCIA
+
+UX, design, SEO, refinamentos.
+
+### P4 — FUTURO
+
+Recursos interessantes mas sem impacto imediato.
+
+Execute P0 → P1 → P2 → P3 → P4.
+
+---
+
+# 42. PROIBIÇÕES
+
+NÃO:
+
+* inventar clientes;
+* inventar vendas;
+* inventar áudio;
+* inventar portfólio;
+* inventar créditos;
+* inventar permissões;
+* inventar pagamentos;
+* inventar integrações;
+* fingir checkout funcional;
+* fingir automação executada;
+* fingir credenciais;
+* fingir infraestrutura física;
+* criar métricas falsas;
+* criar prova social falsa;
+* criar dados fictícios em produção.
+
+Se algo não existir:
+
+**mostrar claramente que está pendente.**
+
+---
+
+# 43. TESTES
+
+Depois das alterações:
+
+Executar testes disponíveis.
+
+Verificar:
+
+* build;
+* lint;
+* tipos;
+* rotas;
+* autenticação;
+* permissões;
+* banco;
+* formulários;
+* uploads;
+* downloads;
+* portal;
+* catálogo;
+* checkout em ambiente de teste;
+* automações;
+* jobs;
+* responsividade.
+
+Corrigir regressões.
+
+---
+
+# 44. TESTE DE REGRESSÃO DO LEGADO
+
+Antes de considerar a ampliação concluída:
+
+verifique especificamente as funcionalidades que já estavam operacionais:
+
+* portfólio premium;
+* explorador de beats;
+* portal;
+* Beat Lab;
+* controle dos três nós.
+
+Nenhuma dessas funcionalidades deve ser perdida silenciosamente.
+
+---
+
+# 45. SISTEMA DE STATUS
+
+Cada módulo deve possuir estado visível internamente:
+
+🟢 OPERACIONAL
+🟡 PARCIAL
+🔵 CONFIGURADO / AGUARDANDO CREDENCIAL
+🟠 AGUARDANDO ATIVO
+🔴 COM PROBLEMA
+⚪ NÃO CONFIGURADO
+
+Isso deve facilitar a manutenção futura.
+
+---
+
+# 46. CENTRO DE CONTROLE
+
+Criar um centro administrativo chamado:
+
+**DUCK CONTROL CENTER**
+
+Com:
+
+* saúde;
+* tarefas;
+* automações;
+* integrações;
+* clientes;
+* produtos;
+* pedidos;
+* ativos;
+* auditoria;
+* logs;
+* configurações;
+* permissões.
+
+Esse deve ser o cérebro operacional da plataforma.
+
+---
+
+# 47. VISÃO DE LONGO PRAZO
+
+A arquitetura deve permitir que o DUCK evolua para:
+
+**STUDIO + MARKETPLACE + CRM + CLIENT PORTAL + AUTOMATION ENGINE + DIGITAL ASSET SYSTEM + OPERATING CORE**
+
+sem obrigar uma reescrita completa.
+
+A plataforma deve crescer modularmente.
+
+---
+
+# 48. AUTONOMIA PROGRESSIVA
+
+Construir o sistema para evoluir nesta direção:
+
+```text
+MANUAL
+   ↓
+ASSISTIDO
+   ↓
+AUTOMATIZADO
+   ↓
+ORQUESTRADO
+   ↓
+AUTÔNOMO COM SUPERVISÃO
+```
+
+A autonomia deve ser conquistada por confiabilidade.
+
+Não ativar automações perigosas simplesmente para dizer que o sistema é "autônomo".
+
+---
+
+# 49. RESULTADO FINAL ESPERADO
+
+Ao terminar, o projeto deve parecer menos uma coleção de páginas e mais um:
+
+# SISTEMA OPERACIONAL DIGITAL PARA UM NEGÓCIO CRIATIVO
+
+Com:
+
+* produto;
+* catálogo;
+* clientes;
+* vendas;
+* licenças;
+* arquivos;
+* produção;
+* portal;
+* automações;
+* auditoria;
+* observabilidade;
+* segurança;
+* internacionalização;
+* administração;
+* infraestrutura preparada para crescimento.
+
+---
+
+# 50. EXECUÇÃO
+
+NÃO me entregue apenas um plano.
+
+Faça o trabalho no projeto.
+
+Primeiro:
+
+1. audite;
+2. mapeie;
+3. preserve;
+4. corrija;
+5. amplie;
+6. teste;
+7. documente;
+8. verifique regressões;
+9. organize o GitHub;
+10. deixe explícito o que ainda depende de credenciais ou ativos externos.
+
+Não pare porque uma integração externa está bloqueada.
+
+Implemente tudo que puder ser implementado de forma real sem ela.
+
+---
+
+# 51. RELATÓRIO FINAL OBRIGATÓRIO
+
+Ao terminar, apresente:
+
+## A. O QUE JÁ EXISTIA
+
+## B. O QUE FOI CORRIGIDO
+
+## C. O QUE FOI AMPLIADO
+
+## D. O QUE FOI REMOVIDO POR NÃO TRAZER BENEFÍCIO
+
+## E. O QUE ESTÁ REALMENTE FUNCIONANDO
+
+## F. O QUE ESTÁ PARCIAL
+
+## G. O QUE ESTÁ BLOQUEADO POR CREDENCIAIS
+
+## H. O QUE ESTÁ BLOQUEADO POR ATIVOS
+
+## I. RISCOS ENCONTRADOS
+
+## J. TESTES EXECUTADOS
+
+## K. ESTADO DO GITHUB
+
+## L. PRÓXIMAS MELHORIAS DE MAIOR ROI
+
+Não diga "concluído" quando algo estiver apenas preparado.
+
+Diferencie rigorosamente:
+
+**IMPLEMENTADO**
+
+de
+
+**PREPARADO**
+
+de
+
+**BLOQUEADO**
+
+de
+
+**NÃO NECESSÁRIO**.
+
+---
+
+# PRINCÍPIO FINAL
+
+O objetivo não é fazer o projeto parecer maior.
+
+O objetivo é fazer o projeto ser **mais capaz**.
+
+Cada ampliação deve responder a pelo menos uma destas perguntas:
+
+**Isso vende?**
+
+**Isso economiza trabalho?**
+
+**Isso reduz erro?**
+
+**Isso aumenta segurança?**
+
+**Isso aumenta autonomia operacional?**
+
+**Isso melhora a experiência do cliente?**
+
+**Isso preserva o legado?**
+
+**Isso prepara crescimento futuro?**
+
+Se a resposta for não para todas:
+
+**não implemente.**
+
+Construa uma máquina digital real, modular e auditável, mas não invente capacidades que a infraestrutura atual não possui.
+
+**Preserve o legado. Amplifique o que funciona. Automatize o que é seguro. Audite tudo. E deixe a plataforma preparada para crescer sem depender de uma única ferramenta, API ou fornecedor.**
