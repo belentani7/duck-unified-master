@@ -16,7 +16,7 @@ pnpm check
 
 # Linting
 echo "✨ Linting..."
-pnpm format --check
+pnpm exec prettier --check .
 
 # Testing
 echo "🧪 Running tests..."
