@@ -2,12 +2,12 @@
 
 FROM node:20-alpine as dependencies
 WORKDIR /app
-COPY package.json pnpm-lock.yaml ./
+COPY package.json ./
 RUN npm install -g pnpm@10 && pnpm install --frozen-lockfile
 
 FROM node:20-alpine as builder
 WORKDIR /app
-COPY package.json pnpm-lock.yaml ./
+COPY package.json ./
 RUN npm install -g pnpm@10 && pnpm install --frozen-lockfile
 COPY . .
 RUN pnpm build
@@ -20,7 +20,7 @@ RUN npm install -g pnpm@10
 COPY --from=dependencies /app/node_modules ./node_modules
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/public ./public
-COPY package.json pnpm-lock.yaml ./
+COPY package.json ./
 
 EXPOSE 3000
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
